@@ -1,0 +1,17 @@
+{
+  "name": "exemplo-nodejs-websocket-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+	"start": "node server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gustavo Maruyama <gustavo.maruyama@ifms.edu.br> (https://github.com/gustavomaruyama-ifms)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "save": "^2.4.0",
+    "sockjs": "^0.3.20"
+  }
+}

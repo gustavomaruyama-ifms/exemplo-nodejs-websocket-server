@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Websocket - Web Client</title>
+</head>
+
+<body>
+	<h3>Websocket - Web Client</h3>
+
+	<h4>Enviar mensagem:</h4>
+	<div>
+		<label for="campoMensagem">Mensagem:</label>
+		<input type="text" id="campoMensagem"/>
+		<button onclick="enviarMensagem()">Enviar</button>
+	</div>
+
+	<h4>Mensagens recebidas:</h4>
+	<div id="mensagens">
+
+	</div>
+</body>
+
+<script>
+	const connection = new WebSocket('ws://localhost:3000/exemplo/websocket');
+
+	function enviarMensagem(){
+		const mensagem =  document.getElementById('campoMensagem').value;
+		connection.send(mensagem);
+	}
+
+	connection.onmessage = function (pacote) {
+		console.log("Chegou mensagem do servidor");
+		const mensagem = pacote.data;
+		document.getElementById('mensagens').innerHTML += '<p>Mensagem recebida: '+mensagem+'</p>';
+	};
+</script>
+</html>
