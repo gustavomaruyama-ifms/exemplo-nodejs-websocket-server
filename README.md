@@ -14,3 +14,8 @@ npm start
 ```
 http://localhost:3000/index.html
 ```
+
+## Endereço do servidor websocket
+```
+http://localhost:3000/exemplo/websocket
+```
