@@ -12,5 +12,5 @@ npm start
 
 ## Endereço para abrir o cliente no navegador web
 ```
-http://localhost:3000/exemplo/websocket
+http://localhost:3000/index.html
 ```
